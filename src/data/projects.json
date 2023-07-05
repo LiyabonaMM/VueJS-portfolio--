@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "E-commerce Website",
+    "description": "A fully functional e-commerce website with user authentication, product listing, shopping cart, and payment integration.",
+    "technologies": "HTML, CSS, JavaScript, React, Node.js, MongoDB",
+    "image": "https://i.postimg.cc/jdxxQSNn/hulu.png",
+    "link": "https://example.com/project1",
+    "github": "https://github.com/username/project1"
+  },
+  {
+    "id": 2,
+    "title": "Travel App",
+    "description": "A travel application that provides information about popular travel destinations, allows users to book flights and hotels, and provides travel recommendations.",
+    "technologies": "HTML, CSS, JavaScript, Vue.js, Express.js, PostgreSQL",
+    "image": "path_to_image",
+    "link": "https://example.com/project2",
+    "github": "https://github.com/username/project2"
+  }
+]

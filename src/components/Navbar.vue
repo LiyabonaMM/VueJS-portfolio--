@@ -1,23 +1,47 @@
 <template>
-  <nav>
-    <ul>
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/about">About</router-link></li>
-      <li><router-link to="/work-education">Resume</router-link></li>
-      <li><router-link to="/skills">Skills</router-link></li>
-      <li><router-link to="/projects">Projects</router-link></li>
-      <li><router-link to="/testimonials">Testimonials</router-link></li>
-      <li><router-link to="/contact">Contact</router-link></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <router-link to="/" class="navbar-brand">My Portfolio</router-link>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link to="/" class="nav-link">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/about" class="nav-link">About</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/work-education" class="nav-link"
+              >Work/Education</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link to="/skills" class="nav-link">Skills</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/projects" class="nav-link">Projects</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/testimonials" class="nav-link"
+              >Testimonials</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link to="/contact" class="nav-link">Contact</router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </template>
-
-<script>
-export default {
-  name: 'Navbar',
-};
-</script>
-
-<style scoped>
-/* Add your navbar styles here */
-</style>

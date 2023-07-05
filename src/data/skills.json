@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "HTML",
+    "icon": "fab fa-html5",
+    "description": "HTML, the foundational language of the web, which I use to create the structure and layout of websites, ensuring they are accessible, semantically correct, and visually appealing."
+  },
+  {
+    "id": 2,
+    "name": "CSS",
+    "icon": "fab fa-css3",
+    "description": "CSS, a powerful styling language that I utilize to enhance the visual appearance and layout of websites, creating engaging and responsive user interfaces."
+  },
+  {
+    "id": 3,
+    "name": "JavaScript",
+    "icon": "fab fa-js",
+    "description": "JavaScript, a versatile and powerful programming language that enables me to create dynamic and interactive experiences on the web."
+  },
+  {
+    "id": 4,
+    "name": "Vue.js",
+    "icon": "fab fa-vuejs",
+    "description": "Vue.js, a progressive JavaScript framework renowned for its simplicity and efficiency in building interactive and responsive user interfaces for modern web applications."
+  },
+  {
+    "id": 5,
+    "name": "Node.js",
+    "icon": "fab fa-node-js",
+    "description": "Node.js, a server-side JavaScript runtime that allows me to build scalable and efficient web applications with JavaScript on the backend."
+  },
+  {
+    "id": 6,
+    "name": "MongoDB",
+    "icon": "fas fa-database",
+    "description": "MongoDB, a popular NoSQL database that I use to store and retrieve data in a flexible and scalable manner for web applications."
+  }
+]
