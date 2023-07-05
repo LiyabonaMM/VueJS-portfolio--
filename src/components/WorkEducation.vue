@@ -1,30 +1,120 @@
 <template>
   <section class="work-education">
     <div class="container">
-      <h2>Work/Education</h2>
-      <div v-for="experience in experiences" :key="experience.id">
-        <h3>{{ experience.title }}</h3>
-        <p>{{ experience.company }}</p>
-        <p>{{ experience.duration }}</p>
-        <p>{{ experience.description }}</p>
+      <h2>Resume</h2>
+      <div class="timeline">
+        <div
+          class="timeline-item"
+          v-for="experience in experiences"
+          :key="experience.id"
+        >
+          <div class="timeline-content">
+            <h3>{{ experience.title }}</h3>
+            <p class="timeline-date">{{ experience.duration }}</p>
+            <ul class="timeline-description">
+              <li
+                v-for="description in experience.descriptions"
+                :key="description"
+              >
+                {{ description }}
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import experienceData from '@/data/experience.json';
+import educationData from '@/data/education.json';
 
 export default {
   name: 'WorkEducation',
   data() {
     return {
-      experiences: experienceData
+      experiences: []
     };
+  },
+  async mounted() {
+    try {
+      this.experiences = await this.fetchExperienceData();
+    } catch (error) {
+      console.error('Failed to fetch experience data:', error);
+    }
+  },
+  methods: {
+    fetchExperienceData() {
+      return new Promise((resolve, reject) => {
+        // Simulating an asynchronous API call
+        setTimeout(() => {
+          try {
+            // Assuming educationData is an array from the education.json file
+            resolve(educationData);
+          } catch (error) {
+            reject(error);
+          }
+        }, 1000);
+      });
+    }
   }
 };
 </script>
 
 <style scoped>
 /* Add your custom styles here */
+
+.timeline {
+  position: relative;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #007bff;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 20px 40px;
+  margin-bottom: 50px;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  right: -8px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #007bff;
+}
+
+.timeline-content {
+  position: relative;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.timeline-date {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timeline-description {
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline-description li {
+  margin-bottom: 10px;
+}
 </style>

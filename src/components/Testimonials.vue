@@ -2,57 +2,25 @@
   <section class="testimonials">
     <div class="container">
       <h2>Testimonials</h2>
-      <div
-        id="testimonialsCarousel"
-        class="carousel slide"
-        data-ride="carousel"
-      >
-        <ol class="carousel-indicators">
-          <li
-            v-for="(testimonial, index) in testimonials"
-            :key="testimonial.id"
-            :data-target="'#testimonialsCarousel'"
-            :data-slide-to="index"
-            :class="{ active: index === 0 }"
-          ></li>
-        </ol>
-        <div class="carousel-inner">
-          <div
-            v-for="(testimonial, index) in testimonials"
-            :key="testimonial.id"
-            class="carousel-item"
-            :class="{ active: index === 0 }"
-          >
+      <div class="row">
+        <div
+          v-for="testimonial in testimonials"
+          :key="testimonial.id"
+          class="col-md-6 col-lg-4"
+        >
+          <div class="card testimonial-card">
             <img
               :src="testimonial.image"
-              class="testimonial-img"
-              alt="Testimonial Image"
+              :alt="testimonial.name"
+              class="card-img-top"
             />
-            <div class="carousel-caption">
-              <h3>{{ testimonial.name }}</h3>
-              <p>{{ testimonial.company }}</p>
-              <p>{{ testimonial.message }}</p>
+            <div class="card-body">
+              <h3 class="card-title">{{ testimonial.name }}</h3>
+              <p class="card-text">{{ testimonial.company }}</p>
+              <p class="card-text">{{ testimonial.message }}</p>
             </div>
           </div>
         </div>
-        <a
-          class="carousel-control-prev"
-          href="#testimonialsCarousel"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#testimonialsCarousel"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
     </div>
   </section>
@@ -65,32 +33,34 @@ export default {
   name: 'Testimonials',
   data() {
     return {
-      testimonials: testimonialsData
+      testimonials: testimonialsData,
     };
-  }
+  },
 };
 </script>
 
 <style scoped>
-.testimonial-img {
-  width: 150px;
-  height: 150px;
+.testimonial-card {
+  margin-bottom: 2rem;
+}
+
+.testimonial-card .card-img-top {
+  width: 100%;
+  height: 200px;
   object-fit: cover;
-  border-radius: 50%;
-  margin: 0 auto;
+  border-radius: 10px 10px 0 0;
 }
 
-.carousel-caption {
-  text-align: center;
+.testimonial-card .card-body {
+  padding: 1.5rem;
 }
 
-.carousel-caption h3 {
-  font-size: 24px;
-  font-weight: bold;
+.testimonial-card .card-title {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
 }
 
-.carousel-caption p {
-  font-size: 16px;
-  color: #666;
+.testimonial-card .card-text {
+  margin-bottom: 0.5rem;
 }
 </style>

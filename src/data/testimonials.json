@@ -1,44 +1,44 @@
 [
   {
     "id": 1,
-    "name": "John Doe",
-    "company": "ABC Inc.",
-    "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam dapibus neque, quis cursus odio aliquet a.",
-    "image": "path_to_image1"
+    "name": "Olwethu Bhiya",
+    "company": "Colleague at LifeChoices Academy",
+    "message": "'His unwavering commitment to quality and attention to detail are truly remarkable. He consistently produces high-quality work that exceeds expectations, and he never compromises on the standards of excellence. His ability to meet deadlines and handle pressure with ease is a testament to his dedication and determination.'",
+    "image": "https://i.postimg.cc/kXzR30MF/C12-Olwethu-Bhiya-2.jpg"
   },
   {
     "id": 2,
-    "name": "Jane Smith",
-    "company": "XYZ Corp.",
-    "message": "Ut pretium, justo et vestibulum sollicitudin, elit enim bibendum elit, in dapibus nunc est ac diam.",
-    "image": "path_to_image2"
+    "name": "Ethan Lesar",
+    "company": "Colleague at LifeChoices Academy",
+    "message": "I have had the pleasure of working with Liyabona on a few projects now and I must say, his attention to detail and dedication to producing high-quality work never ceases to amaze me. He has a great eye for design and is always willing to collaborate and share his ideas. His technical skills are impressive and his ability to problem-solve is truly remarkable. I have no doubt that he will make a significant impact in the industry, and I am honored to have worked alongside him.",
+    "image": "https://i.postimg.cc/Sx5KzCY6/C12-C1-Ethan-Lesar-3.jpg"
   },
   {
     "id": 3,
-    "name": "David Johnson",
-    "company": "123 Company",
-    "message": "Vivamus tristique laoreet ultrices. Nam vestibulum eleifend turpis nec venenatis.",
-    "image": "path_to_image3"
+    "name": "Oslin Johnshon",
+    "company": "Lecture at LifeChoices Academy",
+    "message": "He puts into effort creating a welcoming and inclusive learning environment. His kindness and compassion towards students is a testament to his character and his commitment to excellence.He is hard worker willing to go the extra mile to ensure that their goal is reached within expected time. He does not let their lack of skill determine them overcoming the challenge.",
+    "image": "https://i.postimg.cc/SRj582M9/Oslin2.png"
   },
   {
     "id": 4,
-    "name": "Sarah Adams",
-    "company": "XYZ Corp.",
-    "message": "Maecenas ultrices, velit sit amet dictum vulputate, nisi mauris eleifend augue, non commodo erat velit vitae felis.",
-    "image": "path_to_image4"
+    "name": "Sakhe Mzolisa",
+    "company": "Team Leader at LifeChoices Academy",
+    "message": "Liyabona is always positive. He likes to be ahead when doing a project so that he does not need to panic. He manages his time effectively making him the post alert learner.",
+    "image": "https://i.postimg.cc/fLRgnt5P/Sakhe.png"
   },
   {
     "id": 5,
-    "name": "Michael Brown",
-    "company": "ABC Inc.",
-    "message": "Nulla ut posuere magna, a gravida lacus. Suspendisse vestibulum dapibus sem, at tristique justo tempor in.",
-    "image": "path_to_image5"
+    "name": "Ridhaa Gabier",
+    "company": "Colleague at LifeChoices Academy",
+    "message": "Liyabona is an outstanding colleague, and I feel lucky to have had the opportunity to work with him. His professionalism, work ethic, and team spirit make him an invaluable asset to any organization, and I am confident that he will continue to achieve great things in his future endeavors.",
+    "image": "https://i.postimg.cc/MTh6nScz/Ridhaa.png"
   },
   {
     "id": 6,
-    "name": "Emily Wilson",
-    "company": "XYZ Corp.",
-    "message": "Aenean fermentum pretium dapibus. Phasellus ultricies turpis vel tincidunt interdum.",
-    "image": "path_to_image6"
+    "name": "Zulaigah Benjamin",
+    "company": "Colleague at LifeChoices Academy",
+    "message": "He is an excellent communicator and team player. He is always willing to go the extra mile to support his colleagues and contribute to the success of our team. He approaches every task with a positive attitude and a willingness to collaborate, and his enthusiasm is contagious.",
+    "image": "https://i.postimg.cc/zXX52Ljd/zuzu.png"
   }
 ]
