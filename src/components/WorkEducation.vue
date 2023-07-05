@@ -74,7 +74,7 @@ export default {
   top: 0;
   bottom: 0;
   width: 4px;
-  background-color: #007bff;
+  background-color: black;
   left: 50%;
   margin-left: -2px;
 }
@@ -94,7 +94,7 @@ export default {
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  background-color: #007bff;
+  background-color: black;
 }
 
 .timeline-content {

@@ -98,7 +98,7 @@ textarea.form-control {
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: black;
   color: #fff;
   border: none;
   border-radius: 4px;

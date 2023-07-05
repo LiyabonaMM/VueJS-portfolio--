@@ -3,27 +3,90 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
-          <img
-            src="https://i.postimg.cc/T1FbYFFj/my-picture.jpg"
-            alt="Liyabona Mxhalisa"
-            class="img-fluid landing__image"
-          />
+          <transition name="slide-in-left">
+            <img
+              v-show="showImage"
+              src="https://i.postimg.cc/T1FbYFFj/my-picture.jpg"
+              alt="Liyabona Mxhalisa"
+              class="img-fluid landing__image"
+            />
+          </transition>
         </div>
         <div class="col-lg-6">
-          <h2 class="landing__title">Liyabona Mxhalisa</h2>
-          <p class="landing__description">
-            Software Developer | Passionate about creating stunning web
-            experiences
-          </p>
-          <router-link to="/about" class="btn btn-primary landing__button"
-            >Read More</router-link
-          >
+          <transition name="slide-in-right">
+            <h2 class="landing__title">
+              <span>{{ typedTitle }}</span>
+              <span class="cursor" v-if="showCursor"></span>
+            </h2>
+          </transition>
+          <transition name="slide-in-right">
+            <p class="landing__description">
+              <span>{{ typedDescription }}</span>
+              <span class="cursor" v-if="showCursor"></span>
+            </p>
+          </transition>
+          <transition name="slide-in-right">
+            <router-link
+              to="/about"
+              class="btn btn-primary landing__button"
+              v-show="showButton"
+              >Read More</router-link
+            >
+          </transition>
         </div>
       </div>
     </div>
   </section>
 </template>
-n
+
+<script>
+export default {
+  name: 'Landing',
+  data() {
+    return {
+      showImage: true,
+      showTitle: false,
+      showDescription: false,
+      showButton: false,
+      showCursor: true,
+      typedTitle: '',
+      typedDescription: '',
+      title: "Liyabona Mxhalisa",
+      description: "Software Developer | Passionate about creating stunning web experiences",
+    };
+  },
+  mounted() {
+    this.animateElements();
+  },
+  methods: {
+    animateElements() {
+      this.typeText(this.title, 'typedTitle', () => {
+        this.typeText(this.description, 'typedDescription', () => {
+          setTimeout(() => {
+            this.showButton = true;
+          }, 500);
+        });
+      });
+    },
+    typeText(text, dataProperty, onComplete) {
+      const typingDelay = 100; // Delay between each character typing
+      let charIndex = 0;
+
+      const type = () => {
+        if (charIndex < text.length) {
+          this[dataProperty] += text[charIndex];
+          charIndex++;
+          setTimeout(type, typingDelay);
+        } else {
+          setTimeout(onComplete, 500); // Typing complete
+        }
+      };
+
+      type();
+    },
+  },
+};
+</script>
 
 <style scoped>
 .landing {
@@ -52,13 +115,42 @@ n
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-  background-color: #007bff;
+  background-color: black;
   color: #fff;
   border-radius: 4px;
-  transition: background-color 0.3s;
 }
 
-.landing__button:hover {
-  background-color: #0056b3;
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 24px;
+  margin-left: 2px;
+  background-color: #000;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.slide-in-left-enter-active,
+.slide-in-left-leave-active {
+  transition: transform 0.8s;
+}
+
+.slide-in-left-enter,
+.slide-in-left-leave-to {
+  transform: translateX(-100%);
+}
+
+.slide-in-right-enter-active,
+.slide-in-right-leave-active {
+  transition: transform 0.8s;
+}
+
+.slide-in-right-enter,
+.slide-in-right-leave-to {
+  transform: translateX(100%);
 }
 </style>

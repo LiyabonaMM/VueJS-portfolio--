@@ -81,7 +81,7 @@ export default {
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: brown;
 }
 
 .btn-secondary {
