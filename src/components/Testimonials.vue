@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { fetchTestimonials } from '@/api.js';
+import { fetchData } from '@/api.js';
 
 export default {
   name: 'Testimonials',
@@ -39,10 +39,26 @@ export default {
   },
   async mounted() {
     try {
-      this.testimonials = await fetchTestimonials();
+      const data = await this.fetchData();
+      this.testimonials = data.testimonials;
     } catch (error) {
       this.error = error.message;
     }
+  },
+  methods: {
+    fetchData() {
+      return new Promise((resolve, reject) => {
+        // Simulating an asynchronous API call
+        setTimeout(() => {
+          try {
+            // Assuming fetchData is an asynchronous function that fetches the data from the API
+            resolve(fetchData());
+          } catch (error) {
+            reject(error);
+          }
+        }, 1000);
+      });
+    },
   },
 };
 </script>
