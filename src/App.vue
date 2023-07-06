@@ -19,6 +19,7 @@ export default {
 <style>
 #app {
   font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa
 }
 /* Add your global styles here */
 </style>

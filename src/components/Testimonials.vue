@@ -1,7 +1,7 @@
 <template>
   <section class="testimonials">
     <div class="container">
-      <h2>Testimonials</h2>
+      <h2 class="testimonials__title">Testimonials</h2>
       <div class="row">
         <div
           v-for="testimonial in testimonials"
@@ -16,8 +16,8 @@
             />
             <div class="card-body">
               <h3 class="card-title">{{ testimonial.name }}</h3>
-              <p class="card-text">{{ testimonial.company }}</p>
-              <p class="card-text">{{ testimonial.message }}</p>
+              <p class="card-company">{{ testimonial.company }}</p>
+              <p class="card-message">{{ testimonial.message }}</p>
             </div>
           </div>
         </div>
@@ -64,27 +64,59 @@ export default {
 </script>
 
 <style scoped>
-.testimonial-card {
-  margin-bottom: 2rem;
+.testimonials {
+  background-color: #f8f9fa;
+  padding: 80px 0;
 }
 
-.testimonial-card .card-img-top {
+.testimonials__title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.testimonial-card {
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
 }
 
-.testimonial-card .card-body {
+.card-body {
   padding: 1.5rem;
+  text-align: center;
 }
 
-.testimonial-card .card-title {
+.card-title {
   font-size: 20px;
   margin-bottom: 0.5rem;
 }
 
-.testimonial-card .card-text {
+.card-company {
+  font-size: 16px;
+  color: #666;
   margin-bottom: 0.5rem;
+}
+
+.card-message {
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .testimonial-card {
+    margin-bottom: 1rem;
+  }
 }
 </style>

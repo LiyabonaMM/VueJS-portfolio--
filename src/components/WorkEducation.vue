@@ -1,7 +1,7 @@
 <template>
   <section class="work-education">
     <div class="container">
-      <h2>Resume</h2>
+      <h2></h2>
       <div class="timeline">
         <div
           class="timeline-item"
@@ -20,6 +20,8 @@
               </li>
             </ul>
           </div>
+          <i class="fas fa-briefcase"></i>
+          <i class="fas fa-graduation-cap"></i>
         </div>
       </div>
     </div>
@@ -56,7 +58,7 @@ export default {
           } catch (error) {
             reject(error);
           }
-        }, 1000);
+        }, 100);
       });
     },
   },
@@ -65,48 +67,33 @@ export default {
 
 <style scoped>
 /* Add your custom styles here */
-
-.timeline {
-  position: relative;
-}
-
-.timeline:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background-color: black;
-  left: 50%;
-  margin-left: -2px;
-}
-
 .timeline-item {
   position: relative;
-  padding: 20px 40px;
-  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.timeline-item:before {
-  content: '';
-  position: absolute;
-  top: 32px;
-  right: -8px;
-  display: inline-block;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  background-color: black;
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .timeline-content {
-  position: relative;
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 6px;
+  flex: 1;
+  margin-left: 20px;
 }
 
-.timeline-date {
+.timeline-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.timeline-content .timeline-date {
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -114,9 +101,32 @@ export default {
 .timeline-description {
   list-style: none;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 .timeline-description li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.fas {
+  font-size: 16px;
+  color: #333;
+  margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+  .timeline-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .timeline-content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .fas {
+    margin: 10px 0;
+  }
 }
 </style>

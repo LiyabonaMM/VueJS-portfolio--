@@ -5,17 +5,23 @@
         <div class="col-lg-6">
           <transition name="fade-in">
             <div v-if="showContent">
-              <h2 class="about__title">{{ typedTitle }}</h2>
+              <h2 class="about__title">
+                <i class="fas fa-user"></i> {{ typedTitle }}
+              </h2>
               <p class="about__description">{{ typedDescription1 }}</p>
               <p class="about__description">{{ typedDescription2 }}</p>
-              <a href="path_to_your_cv" class="btn btn-primary about__button"
-                >Download CV</a
+              <a href="" class="btn btn-primary about__button"
+                ><i class="fas fa-download"></i> Download CV</a
               >
             </div>
           </transition>
         </div>
         <div class="col-lg-6">
-          <!-- Add any additional content or styling for the right-side column if needed -->
+          <img
+            src="https://i.postimg.cc/T1FbYFFj/my-picture.jpg"
+            alt="Your Image"
+            class="about__image"
+          />
         </div>
       </div>
     </div>
@@ -32,10 +38,8 @@ export default {
       typedDescription1: '',
       typedDescription2: '',
       title: 'About Me',
-      description1:
-        'I am a developer based in Cape Town, South Africa. I\'m currently a student at LifeChoice Academy, where I\'ve been developing my skills in HTML, CSS, JavaScript, and Vue.js.',
-      description2:
-        'I\'m passionate about creating visually stunning web experiences that not only look great, but also function seamlessly. In my free time, I enjoy exploring new technologies and experimenting with new design concepts.',
+      description1: 'I am a developer based in Cape Town, South Africa. I\'m currently a student at LifeChoice Academy, where I\'ve been developing my skills in HTML, CSS, JavaScript, and Vue.js.',
+      description2: 'I\'m passionate about creating visually stunning web experiences that not only look great, but also function seamlessly. In my free time, I enjoy exploring new technologies and experimenting with new design concepts.',
     };
   },
   mounted() {
@@ -73,7 +77,6 @@ export default {
 <style scoped>
 /* Styles for the about section */
 .about {
-  background-color: #f8f9fa;
   padding: 80px 0;
 }
 
@@ -102,6 +105,13 @@ export default {
 
 .about__button:hover {
   background-color: brown;
+}
+
+.about__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Animation */
