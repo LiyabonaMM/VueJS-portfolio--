@@ -56,7 +56,7 @@ export default {
           } catch (error) {
             reject(error);
           }
-        }, 1000);
+        }, 100);
       });
     },
   },

@@ -133,24 +133,4 @@ export default {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
 }
-
-.slide-in-left-enter-active,
-.slide-in-left-leave-active {
-  transition: transform 0.8s;
-}
-
-.slide-in-left-enter,
-.slide-in-left-leave-to {
-  transform: translateX(-100%);
-}
-
-.slide-in-right-enter-active,
-.slide-in-right-leave-active {
-  transition: transform 0.8s;
-}
-
-.slide-in-right-enter,
-.slide-in-right-leave-to {
-  transform: translateX(100%);
-}
 </style>

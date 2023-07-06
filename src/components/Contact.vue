@@ -34,13 +34,25 @@
       <div class="footer-content">
         <p class="footer-text">&copy; {{ currentYear }} Liyabona Mxhalisa</p>
         <div class="social-icons">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.instagram.com/liyamxhalisa/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/LiyabonaMM"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="fab fa-github"></i>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://twitter.com/lil_mxhalisa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="fab fa-twitter"></i>
           </a>
         </div>
