@@ -27,14 +27,22 @@
 </template>
 
 <script>
-import testimonialsData from '@/data/testimonials.json';
+import { fetchTestimonials } from '@/api.js';
 
 export default {
   name: 'Testimonials',
   data() {
     return {
-      testimonials: testimonialsData,
+      testimonials: [],
+      error: null,
     };
+  },
+  async mounted() {
+    try {
+      this.testimonials = await fetchTestimonials();
+    } catch (error) {
+      this.error = error.message;
+    }
   },
 };
 </script>

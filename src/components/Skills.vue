@@ -13,15 +13,23 @@
 </template>
 
 <script>
-import skillsData from '@/data/skills.json';
+import { fetchSkills } from '@/api.js';
 
 export default {
   name: 'Skills',
   data() {
     return {
-      skills: skillsData
+      skills: [],
+      error: null,
     };
-  }
+  },
+  async mounted() {
+    try {
+      this.skills = await fetchSkills();
+    } catch (error) {
+      this.error = error.message;
+    }
+  },
 };
 </script>
 

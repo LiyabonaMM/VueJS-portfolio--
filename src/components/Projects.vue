@@ -28,15 +28,23 @@
 </template>
 
 <script>
-import projectData from '@/data/projects.json';
+import { fetchProjects } from '@/api.js';
 
 export default {
   name: 'Projects',
   data() {
     return {
-      projects: projectData
+      projects: [],
+      error: null,
     };
-  }
+  },
+  async mounted() {
+    try {
+      this.projects = await fetchProjects();
+    } catch (error) {
+      this.error = error.message;
+    }
+  },
 };
 </script>
 

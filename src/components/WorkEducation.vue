@@ -27,20 +27,21 @@
 </template>
 
 <script>
-import educationData from '@/data/education.json';
+import { fetchEducation } from '@/api.js';
 
 export default {
   name: 'WorkEducation',
   data() {
     return {
-      experiences: []
+      experiences: [],
+      error: null,
     };
   },
   async mounted() {
     try {
       this.experiences = await this.fetchExperienceData();
     } catch (error) {
-      console.error('Failed to fetch experience data:', error);
+      this.error = error.message;
     }
   },
   methods: {
@@ -49,15 +50,15 @@ export default {
         // Simulating an asynchronous API call
         setTimeout(() => {
           try {
-            // Assuming educationData is an array from the education.json file
-            resolve(educationData);
+            // Assuming fetchEducation is an asynchronous function that fetches the data from the API
+            resolve(fetchEducation());
           } catch (error) {
             reject(error);
           }
         }, 1000);
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
