@@ -18,37 +18,65 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <router-link to="/" class="nav-link">
+            <router-link
+              to="/"
+              class="nav-link"
+              @click="scrollToSection('#landing')"
+            >
               <i class="fas fa-home"></i> Home
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/about" class="nav-link">
+            <router-link
+              to="/about"
+              class="nav-link"
+              @click="scrollToSection('#about')"
+            >
               <i class="fas fa-user"></i> About
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/work-education" class="nav-link">
+            <router-link
+              to="/work-education"
+              class="nav-link"
+              @click="scrollToSection('#work-education')"
+            >
               <i class="fas fa-file-alt"></i> Resume
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/skills" class="nav-link">
+            <router-link
+              to="/skills"
+              class="nav-link"
+              @click="scrollToSection('#skills')"
+            >
               <i class="fas fa-cogs"></i> Skills
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/projects" class="nav-link">
+            <router-link
+              to="/projects"
+              class="nav-link"
+              @click="scrollToSection('#projects')"
+            >
               <i class="fas fa-code"></i> Projects
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/testimonials" class="nav-link">
+            <router-link
+              to="/testimonials"
+              class="nav-link"
+              @click="scrollToSection('#testimonials')"
+            >
               <i class="fas fa-star"></i> Testimonials
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/contact" class="nav-link">
+            <router-link
+              to="/contact"
+              class="nav-link"
+              @click="scrollToSection('#contact')"
+            >
               <i class="fas fa-envelope"></i> Contact
             </router-link>
           </li>
@@ -57,6 +85,20 @@
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  name: 'Navbar',
+  methods: {
+    scrollToSection(section) {
+      const el = document.querySelector(section);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
+  },
+};
+</script>
 
 <style scoped>
 .navbar {
@@ -76,7 +118,7 @@
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #000;
+  color: red;
 }
 
 .navbar-toggler-icon {

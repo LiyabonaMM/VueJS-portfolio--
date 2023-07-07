@@ -1,7 +1,7 @@
 <template>
   <section class="about">
     <div class="container">
-      <div class="row">
+      <div class="row d-flex justify-content-center align-items-center">
         <div class="col-lg-6">
           <transition name="fade-in">
             <div v-if="showContent">
@@ -16,13 +16,9 @@
             </div>
           </transition>
         </div>
-        <div class="col-lg-6">
-          <img
-            src="https://i.postimg.cc/T1FbYFFj/my-picture.jpg"
-            alt="Your Image"
-            class="about__image"
-          />
-        </div>
+        <!-- <div class="col-lg-6">
+          <img src="" alt="" class="about__image" />
+        </div> -->
       </div>
     </div>
   </section>
@@ -38,8 +34,10 @@ export default {
       typedDescription1: '',
       typedDescription2: '',
       title: 'About Me',
-      description1: 'I am a developer based in Cape Town, South Africa. I\'m currently a student at LifeChoice Academy, where I\'ve been developing my skills in HTML, CSS, JavaScript, and Vue.js.',
-      description2: 'I\'m passionate about creating visually stunning web experiences that not only look great, but also function seamlessly. In my free time, I enjoy exploring new technologies and experimenting with new design concepts.',
+      description1:
+        "I am a developer based in Cape Town, South Africa. I'm currently a student at LifeChoice Academy, where I've been developing my skills in HTML, CSS, JavaScript, and Vue.js.",
+      description2:
+        "I'm passionate about creating visually stunning web experiences that not only look great, but also function seamlessly. In my free time, I enjoy exploring new technologies and experimenting with new design concepts.",
     };
   },
   mounted() {
@@ -83,16 +81,19 @@ export default {
 .about__title {
   font-size: 32px;
   margin-bottom: 20px;
+  text-align: center; /* Center align the title */
 }
 
 .about__description {
   font-size: 18px;
   color: #6c757d;
   margin-bottom: 20px;
+  text-align: center; /* Center align the descriptions */
 }
 
 .about__button {
-  display: inline-block;
+  display: block; /* Make the button a block element */
+  margin: 0 auto; /* Center align the button */
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;

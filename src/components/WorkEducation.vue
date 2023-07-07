@@ -1,7 +1,7 @@
 <template>
   <section class="work-education">
     <div class="container">
-      <h2></h2>
+      <h2 class="text-center">Resume</h2>
       <div class="timeline">
         <div
           class="timeline-item"

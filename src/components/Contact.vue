@@ -1,6 +1,6 @@
 <template>
   <section class="contact">
-    <div class="container">
+    <div class="container contact-container">
       <h2>Contact Me</h2>
       <form action="https://formspree.io/f/mjvqvblv" method="POST">
         <div class="form-group">
@@ -88,6 +88,12 @@ export default {
 .container {
   max-width: 600px;
   margin: 0 auto;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.contact-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -127,7 +133,7 @@ textarea.form-control {
   color: #fff;
   padding: 1rem;
   text-align: center;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   width: 100%;
