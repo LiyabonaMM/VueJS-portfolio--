@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router"
-import Landing from "../components/Landing.vue"
-import About from "../components/About.vue"
-import WorkEducation from "../components/WorkEducation.vue"
-import Skills from "../components/Skills.vue"
-import Projects from "../components/Projects.vue"
-import Testimonials from "../components/Testimonials.vue"
-import Contact from "../components/Contact.vue"
+import Landing from "../views/Landing.vue"
+import About from "../views/About.vue"
+import WorkEducation from "../views/WorkEducation.vue"
+import Skills from "../views/Skills.vue"
+import Projects from "../views/Projects.vue"
+import Testimonials from "../views/Testimonials.vue"
+import Contact from "../views/Contact.vue"
 
 const routes = [
   {
