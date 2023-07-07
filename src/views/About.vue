@@ -10,7 +10,7 @@
               </h2>
               <p class="about__description">{{ typedDescription1 }}</p>
               <p class="about__description">{{ typedDescription2 }}</p>
-              <a href="" class="btn btn-primary about__button"
+              <a href="https://drive.google.com/file/d/16NtSZKA3mdb0rLdhGWi_cTyTeKTLPtUZ/view?pli=1" class="btn btn-primary about__button"
                 ><i class="fas fa-download"></i> Download CV</a
               >
             </div>
